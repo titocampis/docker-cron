@@ -1,0 +1,4 @@
+services:
+  cron:
+    image: cron-container:latest
+    container_name: cron-container

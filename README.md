@@ -18,7 +18,7 @@ docker compose up cron
 
 You will have your container reading everytime the content of the file the cron is writing, so if you are patient. In one minute you will see the results:
 
-![pictures/stdout.png](pictures/stdout.png)
+![pictures/stdout.png](pictures/tail.png)
 
 As well, as the cron is writting into the stdout and stderr of the container you can see the 'Hello World' checking the container logs:
 
@@ -26,4 +26,4 @@ As well, as the cron is writting into the stdout and stderr of the container you
 docker logs cron-container
 ```
 
-![pictures/stdout.png](pictures/tail.png)
+![pictures/stdout.png](pictures/stdout.png)

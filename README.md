@@ -1,8 +1,8 @@
-# Run a basic cron into a Docker container
+# Cron Docker :whale2:
 
-In this repository you can see how to run a basic cron job inside a Docker container
+Dive into this repository to unlock the secrets of running basic cron jobs inside a Docker container. All it takes is few minutes and few simple steps. 
 
-With this configuration you just need to:
+Embrace the power of Dockerized Cron Jobs! :whale2::clock10:
 
 :one: Build the image defined on [Dockerfile](Dockerfile):
 
@@ -23,7 +23,17 @@ You will have your container reading everytime the content of the file the cron 
 As well, as the cron is writting into the stdout and stderr of the container you can see the 'Hello World' checking the container logs:
 
 ```bash
+docker compose up -d cron
+```
+
+```bash
 docker logs cron-container
 ```
 
+
 ![pictures/stdout.png](pictures/stdout.png)
+
+Or inside the container file:
+```bash
+docker exec cron-container tail -f /var/log/cron.log
+```

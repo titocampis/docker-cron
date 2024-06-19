@@ -2,7 +2,7 @@
 
 Dive into this repository to unlock the secrets of running basic cron jobs inside a Docker container. All it takes is few minutes and few simple steps. 
 
-Embrace the power of Dockerized Cron Jobs! :whale2: :clock10:
+Embrace the power of Dockerized Cron Jobs! :whale2::clock10:
 
 :one: Build the image defined on [Dockerfile](Dockerfile):
 

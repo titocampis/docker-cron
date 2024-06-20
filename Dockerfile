@@ -7,19 +7,19 @@ RUN set -x && \
     apt-get install
 
 # TZone Configuration
-## Set environment variable for non-interactive
-##     installation (the tzdata ask you for region)
-ENV DEBIAN_FRONTEND=noninteractive
+## Set build variable for non-interactive installation (the tzdata ask you for region)
+ARG DEBIAN_FRONTEND=noninteractive
+
+## Set env variable (to persist inside the container)
+ENV TZ="Europe/Madrid"
 
 ## Installations and configurations to set Madrid TimeZone
-## also reduce the image size cleaning up APT
+##    also reduce the image size cleaning up APT
 RUN apt-get install -y tzdata && \
-    ln -snf /usr/share/zoneinfo/Europe/Madrid /etc/localtime && \
-    echo "Europe/Madrid" > /etc/timezone && \
+    ln -snf /usr/share/zoneinfo/${TZ} /etc/localtime && \
+    echo "${TZ}" > /etc/timezone &&\
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-
-ENV TZ=Europe/Madrid
 
 # Copy crontab file
 COPY crontab .

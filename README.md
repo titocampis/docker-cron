@@ -10,7 +10,7 @@ Embrace the power of Dockerized Cron Jobs! :whale2::clock10:
 docker build -t cron-container .
 ```
 
-:two: Run the container using the [docker-compose.yml](docker-compose.yml) file:
+:two: Run the container using the [docker-compose.yaml](docker-compose.yaml) file:
 
 ```bash
 docker compose up cron
